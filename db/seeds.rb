@@ -14,7 +14,7 @@ Attendance.destroy_all
 
 10.times do
   e = Faker::Name.first_name
-  User.create!(email: "#{e}@yopmail.com", description: Faker::Lorem.sentence(word_count: 3), first_name: e, last_name: Faker::Name.last_name, encrypted_password: "test")
+  User.create!(email: "#{e}@yopmail.com", description: Faker::Lorem.sentence(word_count: 3), first_name: e, last_name: Faker::Name.last_name, password: "cacaboudin")
 end
 
 10.times do
