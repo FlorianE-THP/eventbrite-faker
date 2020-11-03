@@ -1,0 +1,13 @@
+<h1>Salut <%= current_user.first_name%></h1>
+<h5> Voici ton profil</h5>
+<br>
+<p><%= current_user.first_name %></p>
+<p><%= current_user.last_name %></p>
+<p><%= current_user.email %></p>
+<p><%= current_user.description %></p>
+<br>
+<% @event.each do |e|%>
+  <%= e.title %> <br>
+  <%= link_to "Event", event_path(e.id), :class =>"dropdown-item"%>
+<% end%>
+<%= link_to "Mon Profil", edit_user_registration_path, :class =>"dropdown-item"%>

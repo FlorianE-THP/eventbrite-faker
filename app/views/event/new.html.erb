@@ -1,0 +1,42 @@
+<h1> Caca boudin </h1>
+
+
+<%= form_tag url_for(action: 'create'), method: "post" do %>
+<form>
+  <div class="row">
+    <div class="col">
+        <%= label_tag 'Titre' %> <br/>
+        <%= text_field_tag 'title', @event.title, class: "form-control", placeholder: 'Un titre sympa', autocomplete: 'off' %>
+        <br /> <br />
+</div>
+<div class="col">
+        <%= label_tag 'Description' %> <br />
+        <%= text_field_tag 'description', @event.description, class: "form-control", placeholder: '20 à 1000 caractères', autocomplete: 'off'%>
+</div>
+<div class="col">
+        <%= label_tag 'Duration' %> <br />
+        <%= text_field_tag 'duration', @event.duration, class: "form-control", placeholder: 'Par tranche de 5 minutes', autocomplete: 'off'%>
+</div>
+<div class="col">
+        <%= label_tag 'Date' %> <br />
+        <%= text_field_tag 'start_date', @event.start_date, class: "form-control", placeholder: 'Date de début', autocomplete: 'off'%>
+</div>
+<div class="col">
+        <%= label_tag 'Prix' %> <br />
+        <%= text_field_tag 'price', @event.price, class: "form-control", placeholder: 'Prix €', autocomplete: 'off'%>
+</div>
+<div class="col">
+        <%= label_tag 'Ville' %> <br />
+        <%= text_field_tag 'location', @event.location, class: "form-control", placeholder: 'Ville', autocomplete: 'off'%>
+</div>
+
+  </div>
+
+        <br /> 
+
+
+        <%= submit_tag "Créer l'évènement", class: "btn btn-primary" %>  <%= link_to "Revenir à l'accueil", root_path, :class => 'btn btn-info'%>
+</div>
+      <% end %>
+
+        </form>
