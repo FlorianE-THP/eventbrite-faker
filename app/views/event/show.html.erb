@@ -1,2 +1,9 @@
-<p><%= @event.title%>
-  <p><%= @event.description%>
+<p><%= @event.title%></p>
+<p><%= @event.description%></p>
+<p><%= @event.duration%></p>
+<p><%= @event.start_date.strftime("%H:%M")%></p>
+<p><%= @event.price%></p>
+<p><%= @event.location%></p>
+<p><%= @event.organizer.email%></p>
+<p><%= @end_date.strftime("%H:%M")%></p>
+<p><%= @event.users.count%></p>

@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'dotenv-rails'
 gem 'faker'
 gem 'devise'
+gem 'mailjet'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'table_print'
